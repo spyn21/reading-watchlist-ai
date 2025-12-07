@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WatchListAI</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- ✅ Load WebLLM Model -->
+    <script type="module">
+  import { CreateMLCEngine } from "https://esm.run/@mlc-ai/web-llm";
+
+  window.loadLLM = async () => {
+    const engine = await CreateMLCEngine("gemma-2-2b-it-q4f32_1-MLC", {
+      initProgressCallback: (p) => {
+        console.log(`📦 [${Math.round(p.progress * 100)}%] ${p.text}`);
+      },
+    });
+    return engine;
+  };
+</script>
+  </body>
+</html>

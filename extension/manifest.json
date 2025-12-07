@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "WatchListAI Tracker",
+  "version": "1.0",
+  "description": "Tracks articles and videos for summarization.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+     "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon.png"
+    },
+    "default_title": "WatchListAI Tracker"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.wikipedia.org/*",
+        "https://www.youtube.com/*",
+        "https://medium.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

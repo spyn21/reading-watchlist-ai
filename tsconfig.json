@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016",                           // Target modern JavaScript
+    "module": "commonjs",                         // Module system
+    "esModuleInterop": true,                      // Allow default imports from CommonJS modules
+    "forceConsistentCasingInFileNames": true,     // Case-sensitive imports
+    "strict": true,                               // Enable all strict type checks
+    "skipLibCheck": true,                         // Don't check .d.ts files
+
+    /* Alias Support for @/ */
+    "baseUrl": "./src",                           // Base path for imports
+    "paths": {
+      "@/*": ["*"]                                // Map @/ to src/
+    }
+  }
+}
