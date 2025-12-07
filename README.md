@@ -212,4 +212,4 @@ npm run preview
 
 *This project demonstrates modern web development practices, local AI integration, and social learning concepts. Perfect for showcasing full-stack development skills and innovative thinking.*
 
-**Made by Vishrut Soni**
+**Made Bhukya Naresh**
